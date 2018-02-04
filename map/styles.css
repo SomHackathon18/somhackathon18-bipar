@@ -1,0 +1,16 @@
+body{
+	background-color: #CCFF90;
+	font-family: arial;
+}
+
+h3{
+	text-align: center;
+}
+
+#map {
+	height: 780px;
+	width: 420px;
+	margin: auto;
+	border: 10px solid;
+	border-radius: 30px;
+}

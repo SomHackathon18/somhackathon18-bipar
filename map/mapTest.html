@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <br>
+    <h3>BIPAR DEMO</h3>
+    <br>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var lat= 41.53799419999999;
+        var lng = 2.444827499999974;
+        var uluru = {lat: lat, lng: lng};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          center: uluru,
+          styles: [
+            {
+              "featureType": "poi",
+              "elementType": "labels.text",
+              "stylers": [
+                {
+                  "visibility": "off"
+                }
+              ]
+            },
+            {
+              "featureType": "poi.business",
+              "stylers": [
+                {
+                  "visibility": "off"
+                }
+              ]
+            },
+            {
+              "featureType": "road",
+              "elementType": "labels.icon",
+              "stylers": [
+                {
+                  "visibility": "off"
+                }
+              ]
+            },
+            {
+              "featureType": "transit",
+              "stylers": [
+                {
+                  "visibility": "off"
+                }
+              ]
+            }
+          ]
+        });
+        //Descripciones
+        //BiPark
+        var desc_biPark_1 =
+          '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading" align="center">Test</h1>'+
+          '<div id="bodyContent">'+
+          '<p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie erat in turpis sodales, vel fringilla lacus mattis. Donec malesuada justo non massa laoreet, eget aliquet ipsum pulvinar.</p>'+
+          '<p align="center"><img src="img/markers/stars.png" width="200px"></p>'+
+          '</div>'+
+          '</div>';
+        var info_biPark_1 = new google.maps.InfoWindow({
+          content: desc_biPark_1
+        });
+
+        var desc_biPark_2 =
+          '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading" align="center">Test</h1>'+
+          '<div id="bodyContent">'+
+          '<p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie erat in turpis sodales, vel fringilla lacus mattis. Donec malesuada justo non massa laoreet, eget aliquet ipsum pulvinar.</p>'+
+          '<p align="center"><img src="img/markers/stars.png" width="200px"></p>'+
+          '</div>'+
+          '</div>';
+        var info_biPark_2 = new google.maps.InfoWindow({
+          content: desc_biPark_2
+        });
+
+        var desc_biPark_3 =
+          '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading" align="center">Test</h1>'+
+          '<div id="bodyContent">'+
+          '<p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie erat in turpis sodales, vel fringilla lacus mattis. Donec malesuada justo non massa laoreet, eget aliquet ipsum pulvinar.</p>'+
+          '<p align="center"><img src="img/markers/stars.png" width="200px"></p>'+
+          '</div>'+
+          '</div>';
+        var info_biPark_3 = new google.maps.InfoWindow({
+          content: desc_biPark_3
+        });
+
+        //Restaurantes
+        var desc_rest_1 =
+          '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading" align="center">Test</h1>'+
+          '<div id="bodyContent">'+
+          '<p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie erat in turpis sodales, vel fringilla lacus mattis. Donec malesuada justo non massa laoreet, eget aliquet ipsum pulvinar.</p>'+
+          '<p align="center"><img src="img/markers/stars.png" width="200px"></p>'+
+          '</div>'+
+          '</div>';
+        var info_rest_1 = new google.maps.InfoWindow({
+          content: desc_rest_1
+        });
+
+        var desc_rest_2 =
+          '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading" align="center">Test</h1>'+
+          '<div id="bodyContent">'+
+          '<p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie erat in turpis sodales, vel fringilla lacus mattis. Donec malesuada justo non massa laoreet, eget aliquet ipsum pulvinar.</p>'+
+          '<p align="center"><img src="img/markers/stars.png" width="200px"></p>'+
+          '</div>'+
+          '</div>';
+        var info_rest_2 = new google.maps.InfoWindow({
+          content: desc_rest_2
+        });
+
+        var desc_rest_3 =
+          '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading" align="center">Test</h1>'+
+          '<div id="bodyContent">'+
+          '<p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie erat in turpis sodales, vel fringilla lacus mattis. Donec malesuada justo non massa laoreet, eget aliquet ipsum pulvinar.</p>'+
+          '<p align="center"><img src="img/markers/stars.png" width="200px"></p>'+
+          '</div>'+
+          '</div>';
+        var info_rest_3 = new google.maps.InfoWindow({
+          content: desc_rest_3
+        });
+
+        var desc_rest_4 =
+          '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading" align="center">Test</h1>'+
+          '<div id="bodyContent">'+
+          '<p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie erat in turpis sodales, vel fringilla lacus mattis. Donec malesuada justo non massa laoreet, eget aliquet ipsum pulvinar.</p>'+
+          '<p align="center"><img src="img/markers/stars.png" width="200px"></p>'+
+          '</div>'+
+          '</div>';
+        var info_rest_4 = new google.maps.InfoWindow({
+          content: desc_rest_4
+        });
+
+        var desc_rest_5 =
+          '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading" align="center">Test</h1>'+
+          '<div id="bodyContent">'+
+          '<p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie erat in turpis sodales, vel fringilla lacus mattis. Donec malesuada justo non massa laoreet, eget aliquet ipsum pulvinar.</p>'+
+          '<p align="center"><img src="img/markers/stars.png" width="200px"></p>'+
+          '</div>'+
+          '</div>';
+        var info_rest_5 = new google.maps.InfoWindow({
+          content: desc_rest_5
+        });
+
+        var desc_rest_6 =
+          '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading" align="center">Test</h1>'+
+          '<div id="bodyContent">'+
+          '<p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie erat in turpis sodales, vel fringilla lacus mattis. Donec malesuada justo non massa laoreet, eget aliquet ipsum pulvinar.</p>'+
+          '<p align="center"><img src="img/markers/stars.png" width="200px"></p>'+
+          '</div>'+
+          '</div>';
+        var info_rest_6 = new google.maps.InfoWindow({
+          content: desc_rest_6
+        });
+
+        var desc_rest_7 =
+          '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading" align="center">Test</h1>'+
+          '<div id="bodyContent">'+
+          '<p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie erat in turpis sodales, vel fringilla lacus mattis. Donec malesuada justo non massa laoreet, eget aliquet ipsum pulvinar.</p>'+
+          '<p align="center"><img src="img/markers/stars.png" width="200px"></p>'+
+          '</div>'+
+          '</div>';
+        var info_rest_7 = new google.maps.InfoWindow({
+          content: desc_rest_7
+        });
+
+        //Shop
+        var desc_shop_1 =
+          '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading" align="center">Test</h1>'+
+          '<div id="bodyContent">'+
+          '<p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie erat in turpis sodales, vel fringilla lacus mattis. Donec malesuada justo non massa laoreet, eget aliquet ipsum pulvinar.</p>'+
+          '<p align="center"><img src="img/markers/stars.png" width="200px"></p>'+
+          '</div>'+
+          '</div>';
+        var info_shop_1 = new google.maps.InfoWindow({
+          content: desc_shop_1
+        });
+
+        var desc_shop_2 =
+          '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading" align="center">Test</h1>'+
+          '<div id="bodyContent">'+
+          '<p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie erat in turpis sodales, vel fringilla lacus mattis. Donec malesuada justo non massa laoreet, eget aliquet ipsum pulvinar.</p>'+
+          '<p align="center"><img src="img/markers/stars.png" width="200px"></p>'+
+          '</div>'+
+          '</div>';
+        var info_shop_2 = new google.maps.InfoWindow({
+          content: desc_shop_2
+        });
+
+        var desc_shop_3 =
+          '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading" align="center">Test</h1>'+
+          '<div id="bodyContent">'+
+          '<p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie erat in turpis sodales, vel fringilla lacus mattis. Donec malesuada justo non massa laoreet, eget aliquet ipsum pulvinar.</p>'+
+          '<p align="center"><img src="img/markers/stars.png" width="200px"></p>'+
+          '</div>'+
+          '</div>';
+        var info_shop_3 = new google.maps.InfoWindow({
+          content: desc_shop_3
+        });
+
+        var desc_shop_4 =
+          '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading" align="center">Test</h1>'+
+          '<div id="bodyContent">'+
+          '<p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie erat in turpis sodales, vel fringilla lacus mattis. Donec malesuada justo non massa laoreet, eget aliquet ipsum pulvinar.</p>'+
+          '<p align="center"><img src="img/markers/stars.png" width="200px"></p>'+
+          '</div>'+
+          '</div>';
+        var info_shop_4 = new google.maps.InfoWindow({
+          content: desc_shop_4
+        });
+
+        //Markers
+        var iconBase = 'img/markers/';
+
+        //BiPark
+        var biPark_1 = new google.maps.Marker({
+          position: {lat: 41.538340, lng: 2.444949},
+          map: map,
+          icon: iconBase + 'bipark.png'
+        });
+        biPark_1.addListener('click', function() {
+            info_biPark_1.open(map, biPark_1);
+        });
+
+        var biPark_2 = new google.maps.Marker({
+          position: {lat: 41.537112, lng: 2.441830},
+          map: map,
+          icon: iconBase + 'bipark.png'
+        });
+        biPark_2.addListener('click', function() {
+            info_biPark_2.open(map, biPark_2);
+          });
+
+        var biPark_3 = new google.maps.Marker({
+          position: {lat: 41.535239, lng: 2.446265},
+          map: map,
+          icon: iconBase + 'bipark.png'
+        });
+        biPark_3.addListener('click', function() {
+            info_biPark_3.open(map, biPark_3);
+          });
+
+        //Restaurantes
+        var rest_1 = new google.maps.Marker({
+          position: {lat: 41.536856, lng: 2.4475929999999835},
+          map: map,
+          icon: iconBase + 'restaurant.png'
+        });
+        rest_1.addListener('click', function() {
+            info_rest_1.open(map, rest_1);
+          });
+
+        var rest_2 = new google.maps.Marker({
+          position: {lat: 41.5372868, lng: 2.444217299999991},
+          map: map,
+          icon: iconBase + 'restaurant.png'
+        });
+        rest_2.addListener('click', function() {
+            info_rest_2.open(map, rest_2);
+          });
+
+        var rest_3 = new google.maps.Marker({
+          position: {lat: 41.5368228, lng: 2.4440285000000586},
+          map: map,
+          icon: iconBase + 'restaurant.png'
+        });
+        rest_3.addListener('click', function() {
+            info_rest_3.open(map, rest_3);
+          });
+
+        var rest_4 = new google.maps.Marker({
+          position: {lat: 41.53872450000001, lng: 2.4438552999999956},
+          map: map,
+          icon: iconBase + 'restaurant.png'
+        });
+        rest_4.addListener('click', function() {
+            info_rest_4.open(map, rest_4);
+          });
+
+        var rest_5 = new google.maps.Marker({
+          position: {lat: 41.53887, lng: 2.4436000000000604},
+          map: map,
+          icon: iconBase + 'restaurant.png'
+        });
+        rest_5.addListener('click', function() {
+            info_rest_5.open(map, rest_5);
+          });
+
+        var rest_6 = new google.maps.Marker({
+          position: {lat: 41.539189, lng: 2.4454299999999876},
+          map: map,
+          icon: iconBase + 'restaurant.png'
+        });
+        rest_6.addListener('click', function() {
+            info_rest_6.open(map, rest_6);
+          });
+
+        var rest_7 = new google.maps.Marker({
+          position: {lat: 41.53880160000001, lng: 2.4460924999999634},
+          map: map,
+          icon: iconBase + 'restaurant.png'
+        });
+        rest_7.addListener('click', function() {
+            info_rest_7.open(map, rest_7);
+          });
+
+        //Shop
+        var shop_1 = new google.maps.Marker({
+          position: {lat: 41.5387517, lng: 2.445093300000053},
+          map: map,
+          icon: iconBase + 'localShop.png'
+        });
+        shop_1.addListener('click', function() {
+            info_shop_1.open(map, shop_1);
+          });
+
+        var shop_2 = new google.maps.Marker({
+          position: {lat: 41.5370383, lng: 2.444319299999961},
+          map: map,
+          icon: iconBase + 'localShop.png'
+        });
+        shop_2.addListener('click', function() {
+            info_shop_2.open(map, shop_2);
+          });
+
+        var shop_3 = new google.maps.Marker({
+          position: {lat: 41.5398577, lng: 2.443966400000022},
+          map: map,
+          icon: iconBase + 'localShop.png'
+        });
+        shop_3.addListener('click', function() {
+            info_shop_3.open(map, shop_3);
+          });
+
+        var shop_4 = new google.maps.Marker({
+          position: {lat: 41.53751339999999, lng: 2.442743299999961},
+          map: map,
+          icon: iconBase + 'localShop.png'
+        });
+        shop_4.addListener('click', function() {
+            info_shop_4.open(map, shop_4);
+          });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMkB-l6N9ia8w8RWCSThla75OWxHzj44o&callback=initMap">
+    </script>
+  </body>
+</html>
